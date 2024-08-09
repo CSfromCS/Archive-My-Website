@@ -1,50 +1,49 @@
 <head>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-<script>
-function getQSVar(val) {
-  const query = window.location.search.substring(1);
-  let vars = query.split("&");
-  for (let i = 0; i < vars.length; i++) {
-    let pair = vars[i].split("=");
-    if (pair[0] == val) {
-      return pair[1];
+  <script>
+  function getQSVar(val) {
+    const query = window.location.search.substring(1);
+    let vars = query.split("&");
+    for (let i = 0; i < vars.length; i++) {
+      let pair = vars[i].split("=");
+      if (pair[0] == val) {
+        return pair[1];
+      }
     }
+    return false;
   }
-  return false;
-}
-
-let pdf;
-if (getQSVar("pdf")) {
-  pdf = getQSVar("pdf");
-  document.getElementById("pdf_viewer").src = pdf + "#view=fitH";
-}
-</script>
+  let pdf;
+  if (getQSVar("pdf")) {
+    pdf = getQSVar("pdf");
+    document.getElementById("pdf_viewer").src = pdf + "#view=fitH";
+  }
+  </script>
+    
   <style>
     body {
-  margin: 0;
+      margin: 0;
       text-align: center;
-}
-#pdf_viewer {
-  width: 100vw;
-  height: 800px;
-}
-
+    }
+    #pdf_viewer {
+      width: 95vw;
+      height: 95vh;
+    }
     #linkedin{
-  margin-left: auto;
-  margin-right: auto;
-
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
-
 </head>
+
 <body>
 <!--   <iframe src="https://drive.google.com/file/d/1bZtpZV1n0T9W62C7-0jbLKjyiM0vp78V/preview" width="100%" height="100%" allow="autoplay"></iframe> -->
   
-  <iframe id="pdf_viewer" src="https://drive.google.com/file/d/1Ti38GAtM64Gko3PafgKnnE7j9rW7xd2B/preview" width="95%" height="95%" allow="autoplay"></iframe>
-  <iframe id="pdf_viewer" src="https://drive.google.com/file/d/1m6JB6O09ISNM-SXYFQAKQOhnnr9TeQsw/preview" width="95%" height="100%" allow="autoplay"></iframe>
-  
-  <div id="linkedin" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="csfromcs" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://au.linkedin.com/in/csfromcs?trk=profile-badge"></a></div>
-              
+  <iframe id="pdf_viewer" src="https://drive.google.com/file/d/1Ti38GAtM64Gko3PafgKnnE7j9rW7xd2B/preview" allow="autoplay"></iframe>
+  <iframe id="pdf_viewer" src="https://drive.google.com/file/d/1m6JB6O09ISNM-SXYFQAKQOhnnr9TeQsw/preview" allow="autoplay"></iframe>
+
+  <div id="linkedin">
+  <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="csfromcs" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://au.linkedin.com/in/csfromcs?trk=profile-badge"></a></div>     
+  </div>
 </body>

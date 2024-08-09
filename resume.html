@@ -26,8 +26,8 @@
       text-align: center;
     }
     #pdf_viewer {
-      width: 95vw;
-      height: 95vh;
+      width: 100vw;
+      height: min(95vh, 120vw);
     }
     #linkedin{
       display: inline-block;
@@ -35,12 +35,12 @@
       margin-right: auto;
       padding-top: 10px;
     }
-    @media (max-width: 600px){
+    @media only screen and (min-width: 600px){
     #pdf_viewer {
-      width: 100vw;
-      height: 95vh;
+      width: 95vw;
+      height: min(95vh, 120vw);    }
     }
-    }
+  
   </style>
 </head>
 
